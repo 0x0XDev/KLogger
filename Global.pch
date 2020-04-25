@@ -1,0 +1,25 @@
+//
+//  Global.pch
+//  KLogger
+//
+//
+//  Copyright © 2020 Anonymouz4. All rights reserved.
+//
+
+#ifndef Global_h
+#define Global_h
+
+#define OwnVendor "com.anonymouz"
+#define maxLogStr (200 - sizeof(LOG_TYPE))
+
+typedef enum {
+    LOG_TYPE_INFO = 0,
+    LOG_TYPE_DEBUG
+} LOG_TYPE;
+
+typedef struct {
+    LOG_TYPE	log_type;
+    char		data[maxLogStr];
+} LOG_MSG;
+
+#endif /* Global_h */
